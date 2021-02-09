@@ -1,101 +1,97 @@
 import React from "react";
 import { Row, Col, Card, Button } from "antd";
 import { Link } from "react-router-dom";
-import reactJsHooks from "../../../assets/img/jpg/react-js-hooks.jpg";
-import reactNative from "../../../assets/img/jpg/react-native.jpg";
-import javaScript from "../../../assets/img/jpg/javascript-es6.jpg";
-import wordPress from "../../../assets/img/jpg/wordpress.jpg";
-import prestaShop from "../../../assets/img/jpg/prestashop-1-7.jpg";
-import cssGrid from "../../../assets/img/jpg/css-grid.jpg";
+
+
 
 import "./HomeCourses.scss";
 
 export default function HomeCourses() {
   return (
-    <Row className="home-courses">
-      <Col lg={24} className="home-courses__title">
-        <h2>Aprende y mejora tus habilidades</h2>
-      </Col>
-      <Col lg={4} />
-      <Col lg={16}>
-        <Row className="row-courses">
-          <Col md={6}>
-            <CardCourse
-              image={reactJsHooks}
-              title="React JS Hooks"
-              subtitle="Intermedio - React/JavaScript"
-              link="https://courses.agustinnavarrogaldon.com/react"
-            />
-          </Col>
-          <Col md={6}>
-            <CardCourse
-              image={reactNative}
-              title="React Native Expo"
-              subtitle="Intermedio - React/JavaScript"
-              link="https://courses.agustinnavarrogaldon.com/react-native-expo"
-            />
-          </Col>
-          <Col md={6}>
-            <CardCourse
-              image={javaScript}
-              title="JavaScript ES6"
-              subtitle="Básico - JavaScript"
-              link="https://courses.agustinnavarrogaldon.com/javascript"
-            />
-          </Col>
-          <Col md={6}>
-            <CardCourse
-              image={wordPress}
-              title="WordPress"
-              subtitle="Básico - WordPress"
-              link="https://courses.agustinnavarrogaldon.com/wordpress"
-            />
-          </Col>
-        </Row>
-        <Row className="row-courses">
-          <Col md={6}>
-            <CardCourse
-              image={prestaShop}
-              title="PrestaShop 1.7"
-              subtitle="Básico - PrestaShop"
-              link="https://courses.agustinnavarrogaldon.com/prestashop"
-            />
-          </Col>
-          <Col md={6} />
-          <Col md={6} />
-          <Col md={6}>
-            <CardCourse
-              image={cssGrid}
-              title="CSS Grid"
-              subtitle="Intermedio - CSS"
-              link="https://courses.agustinnavarrogaldon.com/css-grid"
-            />
-          </Col>
-        </Row>
-      </Col>
-      <Col lg={4} />
+    <Row className="how-my-courses-work">
+    <Col lg={24} className="how-my-courses-work__title">
+      <h2>Conoce el método de
+nuestras consultas</h2>
+      <h3>
+     
+       Consiste en apoyarte TODOS LOS DÍAS, donde quiera que estés.
+      </h3>
+    </Col>
+
+    <Col lg={4} />
+    <Col lg={16}>
+      <Row className="row-cards">
+        <Col md={8}>
+          <CardInfo
+            
+            title="Registrate"
+            description="El registro es muy importante para llevar el control y seguimiento de tu progreso"
+          />
+        </Col>
+        <Col md={8}>
+          <CardInfo
+           
+            title="Agenda tu cita"
+            description="Hacemos consulta de Lunes a Domingo."
+          />
+        </Col>
+        <Col md={8}>
+          <CardInfo
+            
+            title="Haces tu pago"
+            description="Fácil, directo en la página, por transferencia,
+             depósito o directamente en el consultorio."
+          />
+        </Col>
+      </Row>
+      <Row className="row-cards">
+        <Col md={8}>
+          <CardInfo
+            title="Recibirás un video tutorial"
+            description="Para tomar tu peso y medidas fácilmente, solo aplica consultas online. "
+          />
+        </Col>
+        <Col md={8}>
+          <CardInfo
+            title="Te damos acceso a la aplicación"
+            description="Primero registrarás tus gustos, 
+            padecimientos y estilo de vida. Luego, 
+            verás tu plan, registrarás tus comidas, 
+            verás recetas, premios y mucho más."
+          />
+        </Col>
+        <Col md={8}>
+          <CardInfo
+            title="Aprendes a comer"
+            description="Y te damos de alta! sabrás que comer y en que cantidades."
+          />
+        </Col>
+      </Row>
+    </Col>
+    <Col lg={4} />
+    <Col lg={4} />
       <Col lg={24} className="home-courses__more">
         <Link to="/courses">
-          <Button>Ver más</Button>
+          <Button>Mas informacion</Button>
         </Link>
       </Col>
     </Row>
   );
 }
 
-function CardCourse(props) {
-  const { image, title, subtitle, link } = props;
+function CardInfo(props) {
+  const {  title, description } = props;
   const { Meta } = Card;
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
-      <Card
-        className="home-courses__card"
-        cover={<img src={image} alt={title} />}
-        actions={[<Button>INGRESAR</Button>]}
-      >
-        <Meta title={title} description={subtitle} />
-      </Card>
-    </a>
+    <Card bordered={false} className="how-my-courses-work__card">
+      
+      <Meta title={title} description={description} />
+    </Card>
   );
 }
+
+// mesoterapia
+// auriculoterapia
+// antropometria
+// activacion fisica

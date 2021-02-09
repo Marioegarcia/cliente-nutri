@@ -4,7 +4,7 @@ import {
   List,
   Avatar,
   Button,
-  Icon,
+  
   Modal as ModalAntd,
   notification
 } from "antd";
@@ -186,13 +186,13 @@ function UserActive(props) {
     <List.Item
       actions={[
         <Button type="primary" onClick={() => editUser(user)}>
-          <Icon type="edit" />
+          
         </Button>,
         <Button type="danger" onClick={desactivateUser}>
-          <Icon type="stop" />
+         
         </Button>,
         <Button type="danger" onClick={showDeleteConfirm}>
-          <Icon type="delete" />
+          
         </Button>
       ]}
     >
@@ -284,10 +284,10 @@ function UserInactive(props) {
     <List.Item
       actions={[
         <Button type="primary" onClick={activateUser}>
-          <Icon type="check" />
+          
         </Button>,
         <Button type="danger" onClick={showDeleteConfirm}>
-          <Icon type="delete" />
+         
         </Button>
       ]}
     >

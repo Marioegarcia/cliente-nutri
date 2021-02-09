@@ -1,0 +1,66 @@
+@import "../../../index.scss";
+
+.nutricion {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-image: url("../../../assets/img/jpg/close-up-nut.jpg");
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__title {
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 40px;
+    
+        h2 {
+          color: $primero;
+          font-size: 32px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+    
+        h3 {
+          color: $cuarto !important;
+        }
+      }
+    
+    .row-cards {
+        .ant-col {
+          padding: 15px !important;
+        }
+    }
+
+    &__card {
+        border: 0;
+        background-color: $segundo;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0px 0px 10px 2px rgba(231, 226, 226, 0.02);
+        -webkit-box-shadow: 0px 0px 10px 2px rgba(243, 236, 236, 0);
+        -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0);
+    
+        .ant-card-body {
+          min-height: 215px;
+        }
+    
+        i {
+          font-size: 45px;
+          margin-bottom: 20px;
+          color: $primary-color-light;
+        }
+    
+        .ant-card-meta-detail {
+           opacity: 1 !important; 
+          .ant-card-meta-title {
+            color: $font-dark;
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .ant-card-meta-description {
+            color: $font-grey-dark;
+          }
+        }
+      }
+}

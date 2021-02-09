@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Button, Icon, Modal, notification } from "antd";
+import { List, Button,  Modal, notification } from "antd";
 import { Link } from "react-router-dom";
 import { getAccessTokenApi } from "../../../../api/auth";
 import { deletePostApi } from "../../../../api/post";
@@ -59,14 +59,14 @@ function Post(props) {
       actions={[
         <Link to={`/blog/${post.url}`} target="_blank">
           <Button type="primary">
-            <Icon type="eye" />
+            
           </Button>
         </Link>,
         <Button type="primary" onClick={() => editPost(post)}>
-          <Icon type="edit" />
+          
         </Button>,
         <Button type="danger" onClick={() => deletePost(post)}>
-          <Icon type="delete" />
+          
         </Button>
       ]}
     >

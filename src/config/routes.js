@@ -4,11 +4,18 @@ import LayoutBasic from "../layouts/LayoutBasic";
 
 // Admin Pages
 import AdminHome from "../pages/Admin";
-import AdminSingIn from "../pages/Admin/SignIn";
+import Registro from "../pages/Admin/Registro";
+import LoginPage from "../pages/Admin/Login/LoginPage";
 import AdminUsers from "../pages/Admin/Users";
+import AdminPaciente from "../pages/Admin/Paciente";
 import AdminMenuWeb from "../pages/Admin/MenuWeb";
-import AdminCourses from "../pages/Admin/Courses";
+import AdminCategoria from "../pages/Admin/Categoria";
+//import AdminCourses from "../pages/Admin/Courses";
 import AdminBlog from "../pages/Admin/Blog";
+import AdminCrearDieta from "../pages/Admin/CrearDieta/CrearDieta";
+import AdminComida from "../components/Admin/Comida";
+
+
 
 // Pages
 import Home from "../pages/Home";
@@ -18,6 +25,8 @@ import Blog from "../pages/Blog";
 
 // Other
 import Error404 from "../pages/Error404";
+
+
 
 const routes = [
   {
@@ -32,27 +41,42 @@ const routes = [
       },
       {
         path: "/admin/login",
-        component: AdminSingIn,
+        component: LoginPage,
         exact: true
       },
       {
-        path: "/admin/users",
+        path: "/admin/registro",
+        component: Registro,
+        exact: true
+      },
+      {
+        path: "/admin/pacientes",
         component: AdminUsers,
         exact: true
       },
       {
-        path: "/admin/menu",
+        path: "/admin/paciente/:id",
+        component: AdminPaciente,
+        exact: true
+      },
+      {
+        path: "/admin/new-dieta/:id",
+        component: AdminCrearDieta,
+        exact: true
+      },
+      {
+        path: "/admin/categorias",
         component: AdminMenuWeb,
         exact: true
       },
       {
-        path: "/admin/courses",
-        component: AdminCourses,
+        path: "/admin/categoria/:id",
+        component: AdminCategoria,
         exact: true
       },
       {
-        path: "/admin/blog",
-        component: AdminBlog,
+        path: "/admin/comidas",
+        component: AdminComida,
         exact: true
       },
       {

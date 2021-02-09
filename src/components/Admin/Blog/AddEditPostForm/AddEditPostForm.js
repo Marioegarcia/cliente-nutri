@@ -3,7 +3,7 @@ import {
   Row,
   Col,
   Form,
-  Icon,
+  
   Input,
   Button,
   DatePicker,
@@ -104,7 +104,7 @@ function AddEditForm(props) {
       <Row gutter={24}>
         <Col span={8}>
           <Input
-            prefix={<Icon type="font-size" />}
+            
             placeholder="Titulo"
             value={postData.title}
             onChange={e => setPostData({ ...postData, title: e.target.value })}
@@ -112,7 +112,7 @@ function AddEditForm(props) {
         </Col>
         <Col span={8}>
           <Input
-            prefix={<Icon type="link" />}
+           
             placeholder="url"
             value={postData.url}
             onChange={e =>

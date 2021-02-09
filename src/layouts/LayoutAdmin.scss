@@ -1,9 +1,20 @@
 @import "../scss/index.scss";
 
+
+.layout-all{
+  // background: rgb(238,174,202);
+  // background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background-image: linear-gradient( 171.8deg,  rgba(238,156,167,1) 13.8%, rgba(246,204,162,1) 82.6% );
+  
+  //background-image: linear-gradient( 93.1deg,  rgba(238,254,183,1) 19.1%, rgba(169,254,222,1) 53.9%, rgba(90,222,255,1) 92% );
+  //background-image: linear-gradient( 70deg,  rgba(112,206,220,1) 35.6%, rgba(200,242,84,1) 99.2% );
+}
+
 .layout-admin {
   transition: margin-left 0.2s;
-
-  &__header {
+  background: transparent;
+    &__header {
+    z-index: 3;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,14 +22,39 @@
     display: flex;
     padding: 0;
     height: 65px;
+    background: rgba( 255, 255, 255, 0.20 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   &__content {
     min-height: calc(100vh - 65px);
-    padding: 90px 25px 25px 25px;
+    padding: 80px 25px 25px 0px;
+    background: transparent !important;
+    @media only screen and (min-width: 990px) {
+     margin-left: 160px;
+    }
   }
 
   &__footer {
-    padding: 20px;
+    color: white;
+    margin-left: -45px;
+    margin-right: 5px;
+    padding: 20px 10px 20px 10px;
+   // background: transparent;
+   background: rgba( 255, 255, 255, 0.20 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 3.0px );
+-webkit-backdrop-filter: blur( 3.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    @media only screen and (min-width: 990px) {
+      margin-left: 160px;
+     }
   }
 }
+

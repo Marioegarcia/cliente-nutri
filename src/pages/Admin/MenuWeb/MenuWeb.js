@@ -1,21 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { getMenuApi } from "../../../api/menu";
 import MenuWebList from "../../../components/Admin/MenuWeb/MenuWebList";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Categorias from "../../../components/Admin/Categorias";
+import { getCategorias } from "../../../api/menu";
+import Categoria from "./../Categoria";
 
 export default function MenuWeb() {
-  const [menu, setMenu] = useState([]);
-  const [reloadMenuWeb, setReloadMenuWeb] = useState(false);
+  const [categorias, setCategorias] = useState();
 
   useEffect(() => {
-    getMenuApi().then(response => {
-      setMenu(response.menu);
+    getCategorias().then(response => {
+      setCategorias(response);
+      //console.log(response);
     });
-    setReloadMenuWeb(false);
-  }, [reloadMenuWeb]);
-
+  
+  }, []);
+  //console.log(categorias);
   return (
     <div className="menu-web">
-      <MenuWebList menu={menu} setReloadMenuWeb={setReloadMenuWeb} />
+
+        <Switch>
+            <Route exact path='/admin/categorias' component={Categorias}></Route>
+            <Route exact path="/admin/categoria" component={Categoria} />
+        </Switch>
+     
     </div>
   );
 }

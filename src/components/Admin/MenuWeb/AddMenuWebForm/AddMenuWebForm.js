@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Icon, Input, Button, Select, notification } from "antd";
+import { Form,  Input, Button, Select, notification } from "antd";
 import { addMenuApi } from "../../../../api/menu";
 import { getAccessTokenApi } from "../../../../api/auth";
 
@@ -73,7 +73,7 @@ function AddForm(props) {
     <Form className="form-add" onSubmit={addMenu}>
       <Form.Item>
         <Input
-          prefix={<Icon type="font-size" />}
+          
           placeholder="Titulo"
           value={menuWebData.title}
           onChange={e =>

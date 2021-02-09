@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Icon } from "antd";
+import { Row, Col } from "antd";
 import { Link } from "react-router-dom";
 
 import "./NavigationFooter.scss";
@@ -25,22 +25,22 @@ function RenderListLeft() {
     <ul>
       <li>
         <a href="#">
-          <Icon type="book" /> Cursos Online
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="code" /> Desarrollo Web
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="database" /> Base de Datos
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="right" /> Politica de Privacidad
+         
         </a>
       </li>
     </ul>
@@ -52,22 +52,22 @@ function RenderListRight() {
     <ul>
       <li>
         <a href="#">
-          <Icon type="hdd" /> Sistemas / Servidores
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="appstore" /> CMS
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="user" /> Porfolio
+         
         </a>
       </li>
       <li>
         <a href="#">
-          <Icon type="right" /> Política de Cookies
+         
         </a>
       </li>
     </ul>

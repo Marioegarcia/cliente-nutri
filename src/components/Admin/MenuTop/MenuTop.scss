@@ -2,10 +2,10 @@
 
 .menu-top {
   display: flex;
-
+  background: transparent;
+  
   button {
-    color: $font-light;
-
+    color: black;
     &:hover {
       color: $primary-color;
     }
@@ -17,8 +17,17 @@
 
   &__left {
     &-logo {
+      background: rgba( 255, 255, 255, 0.00 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 5.0px );
+      -webkit-backdrop-filter: blur( 5.0px );
+      border-radius: 10px;
+    @media (max-width: 550px) {
+      width: 100px;
+    }
       width: 200px;
-      padding: 0 10px;
+      height: 60px;
+      padding: 0 0px;
     }
   }
 

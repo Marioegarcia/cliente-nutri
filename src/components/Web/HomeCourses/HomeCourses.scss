@@ -6,9 +6,9 @@
 
   &__title {
     text-align: center;
-
+    
     h2 {
-      color: $font-light;
+      color: $primary-color;
       font-weight: bold;
       font-size: 32px;
       text-transform: uppercase;
@@ -73,6 +73,67 @@
       &:hover {
         background-color: $primary-color-hover;
         color: $font-light;
+      }
+    }
+  }
+}
+
+
+
+.how-my-courses-work {
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  &__title {
+    text-align: center;
+    line-height: 0.7;
+    margin-bottom: 40px;
+    
+
+    h2 {
+      color: $primary-color !important;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: $primary-color !important;
+    }
+  }
+
+  .row-cards {
+    .ant-col {
+      padding: 5px !important;
+    }
+  }
+
+  &__card {
+    border: 0;
+    background-color: whitesmoke !important;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left !important;
+   
+    .ant-card-body {
+      min-height: auto !important;
+      width: auto !important;
+    }
+
+    i {
+      font-size: 45px;
+      margin-bottom: 20px;
+      color: $primary-color-light;
+    }
+
+    .ant-card-meta-detail {
+      .ant-card-meta-title {
+        color: $cuarto !important;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .ant-card-meta-description {
+        color: $cuarto !important;
       }
     }
   }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Icon, Input, Button, notification } from "antd";
+import { Form,  Input, Button, notification } from "antd";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../../utils/constants";
 import { signInApi } from "../../../api/user";
 
@@ -45,7 +45,7 @@ export default function LoginForm() {
     <Form className="login-form" onChange={changeForm} onSubmit={login}>
       <Form.Item>
         <Input
-          prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
+         
           type="email"
           name="email"
           placeholder="Correo electronico"
@@ -54,7 +54,7 @@ export default function LoginForm() {
       </Form.Item>
       <Form.Item>
         <Input
-          prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />}
+          
           type="password"
           name="password"
           placeholder="Contraseña"
